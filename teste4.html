@@ -1,0 +1,72 @@
+<!--Banner no rodapé com múltiplas linhas e pausa no hover-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Banner no Rodapé com Hover</title>
+  <style>
+    body {
+      margin: 0;
+      padding-bottom: 100px; /* espaço para o banner */
+      font-family: sans-serif;
+    }
+
+    .footer-banner {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #111;
+      color: #fff;
+      overflow: hidden;
+      padding: 10px 0;
+      z-index: 9999;
+    }
+
+    .scroll-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .scroll-line {
+      white-space: nowrap;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .scroll-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 15s linear infinite;
+    }
+
+    .scroll-line:hover .scroll-text {
+      animation-play-state: paused;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="footer-banner">
+    <div class="scroll-wrapper">
+      <div class="scroll-line">
+        <div class="scroll-text">🔥 Promoções exclusivas em agosto | 🛒 Frete grátis para todo o Brasil | 🎁 Brindes especiais em compras acima de R$199</div>
+      </div>
+      <div class="scroll-line">
+        <div class="scroll-text">📱 Lançamento de novos modelos Android | ✨ Qualidade premium com preço justo | ⚡ Entrega rápida e segura</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

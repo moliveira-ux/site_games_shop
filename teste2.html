@@ -1,0 +1,68 @@
+
+ <!-- Exemplo: Banner de texto animado sobre imagem
+ Se você quiser que o banner de texto rolando passe por cima de uma imagem de fundo, basta colocar a imagem como fundo da área do banner ou usar uma estrutura em camadas (overlay).
+Dicas:
+- A imagem de fundo pode ser trocada pela sua (link ou local).
+- A cor da overlay pode ser ajustada para dar mais ou menos contraste (rgba(0, 0, 0, 0.5)).
+- Você pode deixar o texto com ícones, links ou até botões clicáveis.-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Banner sobre imagem</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner-container {
+      position: relative;
+      height: 200px;
+      background-image: url('https://source.unsplash.com/1600x400/?travel'); /* substitua com sua imagem */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .banner-overlay {
+      position: absolute;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* escurece para dar contraste */
+      color: white;
+      white-space: nowrap;
+      font-size: 1.2rem;
+      padding: 10px 0;
+    }
+
+    .banner-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 15s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="banner-container">
+    <div class="banner-overlay">
+      <div class="banner-text">
+        🌍 Descubra os melhores destinos de 2025 | ☀️ Pacotes promocionais exclusivos | ✈️ Reserve agora e economize!
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

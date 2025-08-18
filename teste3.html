@@ -1,0 +1,57 @@
+<!-- Exemplo: Banner rolando no rodapé (footer)
+ Personalizações:
+- Você pode trocar o texto por qualquer informação, links ou ícones.
+- Altere o background-color ou use uma imagem de fundo no rodapé.
+- Use position: relative se quiser que o banner role com a página (e não fique fixo). -->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Banner no Rodapé</title>
+  <style>
+    body {
+      margin: 0;
+      padding-bottom: 50px; /* espaço para o rodapé fixo */
+      font-family: sans-serif;
+    }
+
+    .footer-banner {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #222;
+      color: #fff;
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 10px 0;
+      z-index: 9999;
+    }
+
+    .footer-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 15s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="footer-banner">
+    <div class="footer-text">
+      🔥 Promoções exclusivas para o mês de agosto! | 🛒 Frete grátis em todo o Brasil | 🎁 Brindes especiais nas compras acima de R$ 199
+    </div>
+  </div>
+
+</body>
+</html>

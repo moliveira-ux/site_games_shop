@@ -1,0 +1,49 @@
+<!--Exemplo básico de um banner que corre na página (tipo marquee moderno)
+Como funciona:
+O .banner-container é a faixa fixa no topo (ou onde quiser).
+O .banner-content anda da direita para a esquerda com animation: scroll-left.
+Você pode trocar o texto por notícias, ofertas, atualizações etc.
+É responsivo e funciona sem JavaScript!-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Banner Rolando</title>
+  <style>
+    .banner-container {
+      overflow: hidden;
+      white-space: nowrap;
+      background: #111;
+      color: #fff;
+      padding: 10px 0;
+      font-size: 1.2rem;
+      position: relative;
+    }
+
+    .banner-content {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 15s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="banner-container">
+    <div class="banner-content">
+      ☀️ Top Destinations for 2025 | ✈️ Book Early & Save | 🌴 Exclusive Travel Deals on Forbes Vetted
+    </div>
+  </div>
+
+</body>
+</html>

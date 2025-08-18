@@ -1,0 +1,90 @@
+<!--Exemplo de banner no rodapé com:
+
+✅ Várias linhas
+✅ Rolagem automática
+✅ Pausa no hover
+✅ Botão de fechar
+✅ Fundo semi-transparente para sobrepor imagem ou conteúdo-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Banner Rodapé Avançado</title>
+  <style>
+    body {
+      margin: 0;
+      padding-bottom: 120px;
+      font-family: sans-serif;
+    }
+
+    .footer-banner {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      overflow: hidden;
+      padding: 10px 20px;
+      z-index: 9999;
+    }
+
+    .scroll-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .scroll-line {
+      white-space: nowrap;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .scroll-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 15s linear infinite;
+    }
+
+    .scroll-line:hover .scroll-text {
+      animation-play-state: paused;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="footer-banner" id="banner">
+    <button class="close-btn" onclick="document.getElementById('banner').style.display='none'">×</button>
+    <div class="scroll-wrapper">
+      <div class="scroll-line">
+        <div class="scroll-text">🔥 Promoções de agosto | 🛒 Frete grátis em todo o Brasil | 🎁 Brindes em compras acima de R$199</div>
+      </div>
+      <div class="scroll-line">
+        <div class="scroll-text">📱 Novos modelos Android | ✨ Alta performance | ⚡ Entrega expressa</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
