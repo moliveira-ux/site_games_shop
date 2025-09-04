@@ -1,5 +1,3 @@
-
-
 /* ========================================
    RESET E CONFIGURAÇÕES GERAIS
 ======================================== */
@@ -46,9 +44,9 @@ header nav li a {
 ======================================== */
 /* Container centralizado com largura máxima definida */
 .container {
-    max-width: 1280px;
-    width: 100%;
-    margin: 20%;
+    max-width: 80%;
+    width: auto;
+    margin: auto;
 }
 /* Layout em flexbox para o header e seções, com alinhamento e espaçamento entre itens */
 header .container,
@@ -83,13 +81,16 @@ section p {
 /* Espaço à direita da imagem da loja para afastar do texto */
 .store-front {
     margin-right: 32px;
+    max-width: 100%;
+    width: 350px; 
+    height: auto;
 }
 /* ========================================
    LISTA DE MARCAS (brands-list)
 ======================================== */
 /* Define altura padrão para as imagens das marcas */
 .brands-list img {
-    height: 24px;
+    height: 42px;
 }
 /* Exibe as marcas em linha com espaçamento lateral */
 .brands-list li {
